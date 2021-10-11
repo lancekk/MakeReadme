@@ -6,40 +6,40 @@ let inq = require('inquirer');
 // TODO: Create an array of questions for user input
 const questions = [
   {
-    name: "Title",
+    name: "title",
     type: "input",
   },
   {
-    name: "Description",
+    name: "description",
     type: "input",
   },
   {
-    name: "Installation",
+    name: "install",
     type: "input",
   },
   {
-    name: "Usage",
+    name: "usage",
     type: "input",
   },
   {
-    name: "Contributing",
+    name: "contributing",
     type: "input",
   },
   {
-    name: "Testing",
+    name: "testing",
     type: "input",
   },
   {
-    name: "License",
+    name: "license",
     type: "list",
-    choices: licenses.map(l => {name: l.name; value: l.key; short: l.spdx_id}),
+    choices: licenses.map(l => {return {name: l.name, value: l.key, short: l.spdx_id}}),
   },
   {
-    name: "Github",
+    name: "github",
     type: "input",
   },
   {
-    name: "Email",
+    name: "email",
     type: "input",
   },
 ];
@@ -48,7 +48,9 @@ const questions = [
 function writeToFile(fileName, data) {}
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+  inq.prompt(questions).then(data => console.log(gm(data)));
+}
 
 // Function call to initialize app
 init();
