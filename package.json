@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Lance Kelley",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "inquirer": "^6.3.1"
   }
