@@ -2,6 +2,7 @@
 let gm = require('./utils/generateMarkdown');
 const licenses = require('./utils/licenses')
 let inq = require('inquirer');
+let fs = require('fs');
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -54,11 +55,17 @@ const questions = [
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+  fs.writeFileSync(fileName, data);
+}
 
 // TODO: Create a function to initialize app
 function init() {
-  inq.prompt(questions).then(data => console.log(gm(data)));
+  inq.prompt(questions).then(data => {
+    let md = gm(data);
+    console.log(md);
+    writeToFile('README.md', md);
+  });
 }
 
 // Function call to initialize app
