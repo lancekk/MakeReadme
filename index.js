@@ -8,39 +8,48 @@ const questions = [
   {
     name: "title",
     type: "input",
+    message: "Enter your project's title"
   },
   {
     name: "description",
     type: "input",
+    message: "Enter your project's description"
   },
   {
     name: "install",
     type: "input",
+    message: "Describe how to install your project"
   },
   {
     name: "usage",
     type: "input",
+    message: "Explain how to use your project"
   },
   {
     name: "contributing",
     type: "input",
+    message: "Explain how to contribute to your project"
   },
   {
     name: "testing",
     type: "input",
+    message: "Describe how to test your project"
   },
   {
     name: "license",
     type: "list",
     choices: licenses.map(l => {return {name: l.name, value: l.key, short: l.spdx_id}}),
+    message: "Select a license"
   },
   {
     name: "github",
     type: "input",
+    message: "Enter your github username"
   },
   {
     name: "email",
     type: "input",
+    message: "Enter your contact email"
   },
 ];
 
