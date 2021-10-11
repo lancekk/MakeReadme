@@ -1,5 +1,6 @@
 // TODO: Include packages needed for this application
 let gm = require('./utils/generateMarkdown');
+const licenses = require('./utils/licenses')
 let inq = require('inquirer');
 
 // TODO: Create an array of questions for user input
@@ -31,8 +32,7 @@ const questions = [
   {
     name: "License",
     type: "list",
-    choices: [
-    ],
+    choices: licenses.map(l => {name: l.name; value: l.key; short: l.spdx_id}),
   },
   {
     name: "Github",
