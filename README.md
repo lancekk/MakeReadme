@@ -22,6 +22,10 @@ Submit a pull request through github
 
 ## Testing
 Run the program and examine the output
+
+## Demo
+https://watch.screencastify.com/v/KDCLBFXjmGPNGmgmrLKV
+
 ## License
 [![License](https://img.shields.io/static/v1?label=License&message=mit&color=green)](https://choosealicense.com/licenses/mit/)
 
